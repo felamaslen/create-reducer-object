@@ -1,0 +1,22 @@
+{
+  "name": "create-reducer-object",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npx babel src --out-dir lib",
+    "test": "NODE_ENV=test mocha --require @babel/register \"test/**/*.spec.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
