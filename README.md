@@ -2,7 +2,7 @@
 
 This is a very simple helper library. Traditionally, according to the Redux documentation, reducers are written like this:
 
-```
+```javascript
 function myFirstReducer(state, action) {
     switch (action.type) {
         case 'TODO_ADDED':
@@ -17,7 +17,7 @@ This results in long, unwieldy switch statements when you have many different ac
 
 You can write the equivalent of the above, using this library, as follows:
 
-```
+```javascript
 import { createReducerObject } from 'create-reducer-object';
 
 const myFirstReducer = createReducerObject({
