@@ -25,3 +25,17 @@ const myFirstReducer = createReducerObject({
 });
 ```
 
+You can also set initial state like so:
+
+```javascript
+import { createReducerObject } from 'create-reducer-object';
+
+const initialState = {
+    todos: []
+};
+
+const myInitiatedReducer = createReducerObject({
+    TODO_ADDED: todoAdded
+}, initialState);
+```
+

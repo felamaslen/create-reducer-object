@@ -78,5 +78,22 @@ describe('createReducerObject', () => {
         expect(() => reducer({}, {})).not.to.throw();
         expect(() => reducer({})).not.to.throw();
     });
+
+    it('should accept initial state', () => {
+        const initialState = [];
+
+        const onPush = state => ([...state, 1]);
+
+        const initiatedReducer = createReducerObject({
+            [ACTION1]: onPush
+        }, initialState);
+
+        const action = { type: ACTION1 };
+
+        // eslint-disable-next-line no-undefined
+        const result = initiatedReducer(undefined, action);
+
+        expect(result).to.deep.equal([1]);
+    });
 });
 
