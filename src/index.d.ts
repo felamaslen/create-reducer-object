@@ -2,7 +2,7 @@ type Action = {
   [extraProps: string]: any;
 };
 
-type Reducer<S> = (state: S, action: Action) => S;
+type Reducer<S> = (state?: S, action?: Action | null) => S;
 
 interface ReducerMap<S> {
   [actionType: string]: Reducer<S>;
