@@ -3,9 +3,10 @@ type Action = {
 };
 
 type Reducer<S> = (state?: S, action?: Action | null) => S;
+type PartialReducer<S> = (state?: S, action?: Action | null) => Partial<S>;
 
 interface ReducerMap<S> {
-  [actionType: string]: Reducer<S>;
+  [actionType: string]: PartialReducer<S>;
 }
 
 export declare function createReducerObject<S = object>(
