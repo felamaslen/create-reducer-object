@@ -2,7 +2,7 @@
   "name": "create-reducer-object",
   "version": "1.2.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "prepublish": "npx babel src --out-dir lib --copy-files",
     "test": "NODE_ENV=test mocha --require @babel/register \"test/**/*.spec.js\""
