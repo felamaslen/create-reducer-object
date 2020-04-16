@@ -1,11 +1,11 @@
-type Action = {
+export type Action = {
   [extraProps: string]: any;
 };
 
-type Reducer<S> = (state?: S, action?: Action | null) => S;
-type PartialReducer<S> = (state: S, action: Action) => Partial<S>;
+export type Reducer<S> = (state?: S, action?: Action | null) => S;
+export type PartialReducer<S> = (state: S, action: Action) => Partial<S>;
 
-interface ReducerMap<S> {
+export interface ReducerMap<S> {
   [actionType: string]: PartialReducer<S>;
 }
 
