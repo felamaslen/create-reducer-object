@@ -3,7 +3,7 @@ export type Action = {
 };
 
 export type Reducer<S> = (state?: S, action?: Action | null) => S;
-export type PartialReducer<S> = (state: S, action: Action) => S extends {} ? Partial<S> : S;
+export type PartialReducer<S> = (state: S, action: Action) => Partial<S>;
 
 export interface ReducerMap<S> {
   [actionType: string]: PartialReducer<S>;
