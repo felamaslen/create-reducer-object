@@ -1,6 +1,6 @@
 {
   "name": "create-reducer-object",
-  "version": "1.2.4",
+  "version": "2.0.0",
   "description": "",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
