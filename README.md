@@ -4,12 +4,12 @@ This is a very simple helper library. Traditionally, according to the Redux docu
 
 ```javascript
 function myFirstReducer(state, action) {
-    switch (action.type) {
-        case 'TODO_ADDED':
-            return todoAdded(state, action);
-    }
+  switch (action.type) {
+    case 'TODO_ADDED':
+      return todoAdded(state, action);
+  }
 
-    return state;
+  return state;
 }
 ```
 
@@ -20,22 +20,31 @@ You can write the equivalent of the above, using this library, as follows:
 ```javascript
 import { createReducerObject } from 'create-reducer-object';
 
-const myFirstReducer = createReducerObject({
-    TODO_ADDED: todoAdded
-});
-```
-
-You can also set initial state like so:
-
-```javascript
-import { createReducerObject } from 'create-reducer-object';
-
 const initialState = {
-    todos: []
+  todos: [],
 };
 
-const myInitiatedReducer = createReducerObject({
-    TODO_ADDED: todoAdded
+const myFirstReducer = createReducerObject({
+  TODO_ADDED: todoAdded
 }, initialState);
 ```
 
+## Typescript compatibility
+
+The module is written in and fully compatible with Typescript. You can define your state like so:
+
+```typescript
+import { createReducerObject } from 'create-reducer-object';
+
+type State = {
+  todos: Todo[];
+};
+
+const initialState: State = {
+  todos: [],
+};
+
+const myFirstReducer = createReducerObject<State>({
+  TODO_ADDED: todoAdded,
+}, initialState);
+```
